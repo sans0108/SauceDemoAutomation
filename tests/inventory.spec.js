@@ -24,14 +24,18 @@ test(`Cart Badge Upates when adding products`, async ({page})=>{
     
     await inventory.addProductToCart(constants.text.sauseLabBagepack);
     await inventory.addProductToCart(constants.text.sauseLabBikeLight);
+    await inventory.clickOnShoppingCart();
     const cartCount = await inventory.getCartCount();
+    console.log(typeof cartCount);
     expect(cartCount).toBe(2);
 })
 
 test('Products can be sorted by price, price low to high', async({page})=>{
     await inventory.sortBy(constants.sortOptions.priceLowToHigh); //it will click on sort option
     const prices = await inventory.getAllProductPrices();
+    console.log('prices',prices);
     const sortedPrices =  [...prices].sort((a, b)=>a-b);
+    console.log('sortedPrices', sortedPrices);
     expect(prices).toEqual(sortedPrices);
 })
 

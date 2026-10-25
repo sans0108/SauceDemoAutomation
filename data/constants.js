@@ -11,7 +11,7 @@ module.exports ={
     text: {
         productTitle :'Products',
         sauseLabBagepack : 'Sauce Labs Backpack',
-        sauseLabBikeLight : 'Sauce Labs Bile Light'
+        sauseLabBikeLight : 'Sauce Labs Bike Light'
     },
 
     sortOptions: {
